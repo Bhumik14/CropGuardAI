@@ -1,4 +1,6 @@
 # CropGuardAI
+![Uploading 1000052373.jpg…]()
+
 This Git repository is for team collaboration on the SIH-24 hackathon project.
 
 ## Features: 
