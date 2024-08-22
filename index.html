@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CropGuard-AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="images/Frame 1.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Services.html">SERVICES</a></li>
+            <li><a href="Contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>
+          <span>Empowering Farmers</span> <br />Curing Crop Diseases for a
+          Healthier Harvest
+        </h1>
+        <p>
+          Enhancing agricultural productivity, leading to more bountiful and
+          secure harvests,<br />
+          which are essential for farmers' livelihoods and food security.
+        </p>
+        <a href="" class="hero-btn">Visit Us To Know more</a>
+        <a href="" class="hero-btn">Upload An Image Of Crop</a>
+      </div>
+
+      <button id="openChatbotBtn"><i class="fa-solid fa-spray-can-sparkles"></i></button>
+
+    <div id="chatbotContainer" class="chatbot-popup">
+        <div class="chatbot-header">
+            <span id="closeChatbotBtn" class="close-btn">&times;</span>
+            <h2>CropGuard-AI Assistant</h2>
+        </div>
+        <div class="chatbot-body">
+            <div id="chatHistory" class="chat-history">
+                <!-- Chat messages will appear here -->
+            </div>
+            <input type="text" id="userInput" placeholder="Type your message here..." />
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    </section>
+
+    <!---------- Project ---------->
+
+    <section class="Project">
+      <h1>Our Project</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="Project-col">
+          <img src="images/Project-1.jpg" />
+          <div class="layer">
+            <h3>Protecting Crops</h3>
+          </div>
+        </div>
+        <div class="Project-col">
+          <img src="images/Project-2.jpg" />
+          <div class="layer">
+            <h3>Diseases & Treatments</h3>
+          </div>
+        </div>
+        <div class="Project-col">
+          <img src="images/Project-3.jpg" />
+          <div class="layer">
+            <h3>Production & Market</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------- Call To Action --------->
+
+    <section class="cta">
+      <h1>
+        Support Us By Enrolling In Our Project<br />Anywhere From The World
+      </h1>
+      <a href="Contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!---------- FAQs ---------->
+
+      <div class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+          <div class="question">
+            <span>What are the common symptoms of crop diseases</span>
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </div>
+          <div class="answer">
+            <p>
+              Common symptoms include yellowing of leaves, stunted growth, spots or lesions on leaves and fruits, wilting, and mold growth.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="question">
+            <span>How can I prevent fungal infections in crops?</span>
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </div>
+          <div class="answer">
+            <p>
+              Fungal infections can be prevented by ensuring proper crop rotation, avoiding overhead watering, improving air circulation around plants, and using fungicide treatments when necessary.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="question">
+            <span>Are there organic methods to control crop diseases?</span>
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </div>
+          <div class="answer">
+            <p>
+              Yes, organic methods include using compost tea, neem oil, baking soda sprays, and encouraging beneficial insects like ladybugs and lacewings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <!--------- Footer --------->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
+        asperiores, distinctio at cum eveniet exercitationem recusandae,<br />id
+        impedit molestiae voluptates voluptas iste nisi ipsam dolores sint
+        veniam saepe sequi. Nam!
+      </p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <p>Made with <i class="fa-regular fa-heart"></i> CropGuard-AI Ltd</p>
+    </section>
+
+    <!---------- JavaScript----------->
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>
