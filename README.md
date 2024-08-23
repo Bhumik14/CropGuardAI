@@ -7,3 +7,6 @@ This Git repository is for team collaboration on the SIH-24 hackathon project.
 1. A user-friendly web app that's easy for farmers and agricultural professionals to navigate and use
 2. Upload images of crops to identify potential diseases.
 3. Get instant feedback on disease predictions
+
+## Link for downloading the model
+https://drive.google.com/drive/folders/108BAQcSGZd696IAv8qYwpzcfb65PXng7?usp=sharing
