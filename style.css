@@ -79,7 +79,7 @@ nav img {
 
 .text-box p {
   margin: 10px 0 40px;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -371,7 +371,7 @@ h3 {
 }
 
 .about-col img{
-  width: 100%;
+  width: 140%;
 }
 
 .about-col h1{
@@ -380,6 +380,7 @@ h3 {
 
 .about-col p{
   padding: 15px 0 25px;
+  color: #000000;
 }
 
 .red-btn{
