@@ -77,9 +77,10 @@
         document.querySelector(".error").style.display = "none";
         }
       }
-      searchBtn.addEventListener("click", ()=>{
-        checkWeather();
-      })    
+      searchBtn.addEventListener("click", () => {
+             checkWeather(searchBox.value); // Pass the city name to the checkWeather function
+      });
+   
     </script>
   </body>
 </html>
