@@ -13,17 +13,20 @@ def model_prediction(test_image):
     return result_index
 
 # Sidebar
-st.sidebar.title("Dashboard") 
-app_mode = st.sidebar.selectbox("Select Page",["Home","About","Disease Prediction"])
+st.sidebar.header("Step into the future of agriculture—where every leaf tells a story.🍃✨")
+st.sidebar.title("Dashboard")
+st.sidebar.write("Explore our other tabs here..") 
+app_mode = st.sidebar.selectbox("Switch To Another Tab",["Home","About","Disease Prediction"])
+st.sidebar.image("img123.jpg", caption="Solving Farmers Issues")
+st.sidebar.image("img125.jpg", caption="Predicting various Diseases")
 
-
-# Home page
-if(app_mode=="Home"):
+# 3rd page
+if(app_mode=="Disease Prediction"):
     st.header("Plant Disease Prediction System")
     image_path = "img123.jpg"
     st.image(image_path,use_column_width=True)
+    st.header(" Welcome to the Plant Disease Prediction System! 🌿🔍")
     st.markdown("""
-     Welcome to the Plant Disease Prediction System! 🌿🔍
     
     Our mission is to help in identifying plant diseases efficiently. Upload an image of a plant, and our system will analyze it to detect any signs of diseases. Together, let's protect our crops and ensure a healthier harvest!
 
@@ -48,20 +51,48 @@ if(app_mode=="Home"):
 #About Project
 elif(app_mode=="About"):
     st.header("About")
+    st.video("vid1.mp4", start_time=12, loop=True, autoplay=True, muted=True)
+    st.header("🌱 Our Commitment to Agricultural Innovation 🌾")
     st.markdown("""
-                #### About Dataset
-                This dataset is recreated using offline augmentation from the original dataset.The original dataset can be found on this github repo.
-                This dataset consists of about 87K rgb images of healthy and diseased crop leaves which is categorized into 38 different classes.The total dataset is divided into 80/20 ratio of training and validation set preserving the directory structure.
-                A new directory containing 33 test images is created later for prediction purpose.
-                #### Content
-                1. train (70295 images)
-                2. test (33 images)
-                3. validation (17572 images)
+                🌱 About Us: Our Commitment to Agricultural Innovation 🌾
+👥 Who We Are
+We are a team of passionate engineers, data scientists, and agricultural experts dedicated to transforming the way plant diseases are detected and managed. With a strong background in artificial intelligence, machine learning, and agronomy, we’ve come together to create a solution that addresses one of the most pressing challenges in agriculture: early and accurate disease detection in crops.
 
+🌍 Our Vision
+Our vision is to revolutionize the agricultural sector by providing innovative tools that empower farmers to protect their crops and increase yields. We believe that technology can play a crucial role in ensuring food security, reducing crop losses, and promoting sustainable farming practices. By making advanced technology accessible to everyone, we aim to contribute to a world where healthy crops and abundant harvests are the norm.
+
+🎯 Our Mission
+Our mission is to deliver a powerful yet easy-to-use plant disease prediction system that leverages the latest advancements in artificial intelligence. We strive to help farmers and agriculturists identify plant diseases early, take timely action, and ultimately improve the quality and quantity of their harvests. We are committed to continuous improvement, constantly refining our algorithms and expanding our dataset to cover a wider range of crops and diseases.
+
+🔍 The Problem We Address
+Plant diseases are a significant threat to global agriculture, leading to substantial economic losses and food scarcity. Early detection and treatment are critical, but traditional methods of identifying plant diseases can be time-consuming, expensive, and often inaccurate. Farmers need a reliable, efficient, and cost-effective solution that can help them safeguard their crops against disease outbreaks.
+
+💡 Our Solution
+To address this challenge, we have developed a cutting-edge plant disease prediction system that utilizes machine learning algorithms trained on extensive datasets. Our system can analyze images of plants and accurately identify diseases, providing users with detailed information and actionable recommendations. This technology empowers farmers to make informed decisions quickly, preventing the spread of disease and minimizing crop losses.
+
+🚀 Why We Stand Out
+🔬 Advanced Technology: Our platform uses state-of-the-art AI models, ensuring high accuracy and reliability in disease detection.
+📚 Comprehensive Dataset: We continuously expand our dataset to include a wide variety of crops and diseases, making our system versatile and effective in different agricultural contexts.
+🖥️ User-Centric Design: We prioritize user experience, designing our system to be intuitive and accessible, so that farmers with varying levels of technical expertise can benefit from it.
+🌾 Commitment to Agriculture: We are deeply invested in the success of the agricultural community and work tirelessly to provide tools that make a real difference in the lives of farmers.
+💼 Our Team
+Our team is composed of individuals who share a common passion for agriculture and technology. We bring together diverse expertise in fields such as:
+
+💻 Computer Engineering: Developing the software infrastructure that powers our system.
+🧠 Artificial Intelligence and Machine Learning: Creating and refining the algorithms that drive accurate disease predictions.
+🌱 Agronomy and Plant Science: Ensuring our solutions are grounded in agricultural best practices and are applicable in real-world farming scenarios.
+🌟 Our Future Goals
+Looking ahead, we aim to expand our system to cover more plant species and diseases, making it a global tool for farmers everywhere. We also plan to integrate additional features, such as pest detection and climate impact analysis, to offer a more comprehensive suite of tools for crop management. As we grow, we remain committed to our core values of innovation, accuracy, and user-centricity.
+
+🤝 Join Us on Our Journey
+We invite you to join us on this exciting journey towards healthier crops and more prosperous harvests. Whether you’re a farmer looking to protect your crops, a researcher interested in agricultural technology, or a partner seeking to collaborate on innovative solutions, we welcome you to connect with us.
+
+Explore our platform, learn about our work, and see how we can make a difference together.
                 """)
 
-#Prediction Page
-elif(app_mode=="Disease Prediction"):
+#First page
+elif(app_mode=="Home"):
+    st.header("Empowering farmers with cutting-edge tools for a prosperous tomorrow.🌾💡")
     st.header("Disease Prediction")
     test_image = st.file_uploader("Choose an Image:")
     if(st.button("Show Image")):
@@ -87,8 +118,10 @@ elif(app_mode=="Disease Prediction"):
                     'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus',
                       'Tomato___healthy']
         st.success("Model is Predicting it's a {}".format(class_name[result_index]))  
-
-
+st.video("vid2.mp4", start_time=0, loop=True, autoplay=True, muted=True)
+st.header("Discover the power of AI in safeguarding our crops and securing our future.🤖🌿")
+st.video("vid3.mp4", start_time=0, loop=True, autoplay=True, muted=True)
+st.header("Join us on a journey to revolutionize crop protection and boost yields!🌍✨")
 
 
 
