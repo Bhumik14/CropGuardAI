@@ -41,36 +41,101 @@
           secure harvests,<br />
           which are essential for farmers' livelihoods and food security.
         </p>
-        <a href="" class="hero-btn">Visit Us To Know more</a>
-        <a href="" class="hero-btn">Upload An Image Of Crop</a>
+        <a href="#weather-app" class="hero-btn">Navigate To Weather App</a>
+        <a href="#imageprocess" class="hero-btn">Upload An Image Of Crop</a>
       </div>
 
-      <button id="openChatbotBtn"><i class="fa-solid fa-spray-can-sparkles"></i></button>
+      <button id="openChatbotBtn">
+        <i class="fa-solid fa-spray-can-sparkles"></i>
+      </button>
 
-    <div id="chatbotContainer" class="chatbot-popup">
+      <div id="chatbotContainer" class="chatbot-popup">
         <div class="chatbot-header">
-            <span id="closeChatbotBtn" class="close-btn">&times;</span>
-            <h2>CropGuard-AI Assistant</h2>
+          <span id="closeChatbotBtn" class="close-btn">&times;</span>
+          <h2>CropGuard-AI Assistant</h2>
         </div>
         <div class="chatbot-body">
-            <div id="chatHistory" class="chat-history">
-                <!-- Chat messages will appear here -->
-            </div>
-            <input type="text" id="userInput" placeholder="Type your message here..." />
-            <button id="sendBtn">Send</button>
+          <div id="chatHistory" class="chat-history">
+            <!-- Chat messages will appear here -->
+          </div>
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Type your message here..."
+          />
+          <button id="sendBtn">Send</button>
         </div>
-    </div>
-
+      </div>
     </section>
 
+     <!-- -----------------------------WEATHER APPLICATION------------------------------ -->
+    <div id="weather-app">
+     <div class="section">
+      <video autoplay muted loop class="background-video">
+        <source src="/images/weather.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="weatherapp">
+        <div class="card">
+          <div class="search">
+            <input
+              type="text"
+              placeholder="Enter City Name.."
+              spellcheck="false"
+            />
+            <button><img src="images/search.png" /></button>
+          </div>
+          <div class="error">
+            <p>Invalid city name</p>
+          </div>
+          <div class="weather">
+            <img src="images/rain.png" class="weather-icon" />
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+              <div class="col">
+                <img src="images/humidity.png" />
+                <div>
+                  <p class="humidity">50%</p>
+                  <p>Humidity</p>
+                </div>
+              </div>
+              <div class="col">
+                <img src="images/wind.png" />
+                <div>
+                  <p class="wind">15 km/h</p>
+                  <p>Wind-Speed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Processing Button -->
+     <div id="imageprocess">
+      <div class="upload-area" id="uploadArea">
+        <h2>Drag & Drop Image Here</h2>
+        <input type="file" id="fileInput" style="display: none;">
+        <button id="uploadButton">Or Select File</button>
+    </div>
+    <img id="previewImage" style="display: none;">
+    <div id="predictionResult"></div>
+     </div>
     <!---------- Project ---------->
 
     <section class="Project">
       <h1>Our Project</h1>
-      <p>At CropGuard-AI, we harness the power of AI to protect crops and secure farmers' livelihoods. 
-         Our mission is simple yet impactful: provide farmers with an intuitive tool that instantly detects crop diseases through image analysis. 
-         With real-time feedback and actionable insights, we empower farmers to make swift decisions, ensuring healthier crops and higher yields.
-         Join us in revolutionizing agriculture—one click, one crop, one community at a time.</p>
+      <p>
+        At CropGuard-AI, we harness the power of AI to protect crops and secure
+        farmers' livelihoods. Our mission is simple yet impactful: provide
+        farmers with an intuitive tool that instantly detects crop diseases
+        through image analysis. With real-time feedback and actionable insights,
+        we empower farmers to make swift decisions, ensuring healthier crops and
+        higher yields. Join us in revolutionizing agriculture—one click, one
+        crop, one community at a time.
+      </p>
 
       <div class="row">
         <div class="Project-col">
@@ -105,57 +170,65 @@
 
     <!---------- FAQs ---------->
 
-      <div class="faq-section">
-        <h1>Frequently Asked Questions</h1>
-        <div class="faq">
-          <div class="question">
-            <span>What are the common symptoms of crop diseases</span>
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </div>
-          <div class="answer">
-            <p>
-              Common symptoms include yellowing of leaves, stunted growth, spots or lesions on leaves and fruits, wilting, and mold growth.
-            </p>
-          </div>
+    <div class="faq-section">
+      <h1>Frequently Asked Questions</h1>
+      <div class="faq">
+        <div class="question">
+          <span>What are the common symptoms of crop diseases</span>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
         </div>
-        <div class="faq">
-          <div class="question">
-            <span>How can I prevent fungal infections in crops?</span>
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </div>
-          <div class="answer">
-            <p>
-              Fungal infections can be prevented by ensuring proper crop rotation, avoiding overhead watering, improving air circulation around plants, and using fungicide treatments when necessary.
-            </p>
-          </div>
-        </div>
-        <div class="faq">
-          <div class="question">
-            <span>Are there organic methods to control crop diseases?</span>
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </div>
-          <div class="answer">
-            <p>
-              Yes, organic methods include using compost tea, neem oil, baking soda sprays, and encouraging beneficial insects like ladybugs and lacewings.
-            </p>
-          </div>
+        <div class="answer">
+          <p>
+            Common symptoms include yellowing of leaves, stunted growth, spots
+            or lesions on leaves and fruits, wilting, and mold growth.
+          </p>
         </div>
       </div>
+      <div class="faq">
+        <div class="question">
+          <span>How can I prevent fungal infections in crops?</span>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Fungal infections can be prevented by ensuring proper crop rotation,
+            avoiding overhead watering, improving air circulation around plants,
+            and using fungicide treatments when necessary.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">
+          <span>Are there organic methods to control crop diseases?</span>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Yes, organic methods include using compost tea, neem oil, baking
+            soda sprays, and encouraging beneficial insects like ladybugs and
+            lacewings.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!--------- Footer --------->
 
     <section class="footer">
       <h4>About Us</h4>
       <p>
-        CropGuard-AI is a revolutionary platform that combines advanced AI with agriculture. <br> 
-        We help farmers detect crop diseases in real-time by simply uploading an image, enabling quick and informed decisions to protect their yield. <br>
-        Join us in driving the future of smart farming. <br>
+        CropGuard-AI is a revolutionary platform that combines advanced AI with
+        agriculture. <br />
+        We help farmers detect crop diseases in real-time by simply uploading an
+        image, enabling quick and informed decisions to protect their yield.
+        <br />
+        Join us in driving the future of smart farming. <br />
       </p>
       <div class="icons">
         <i class="fa-brands fa-facebook"></i>
@@ -168,8 +241,7 @@
     </section>
 
     <!---------- JavaScript----------->
-    
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
   </body>
 </html>

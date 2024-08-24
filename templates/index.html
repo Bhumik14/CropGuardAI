@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="uploadArea" class="upload-area">
+        <h2>Drag & Drop Image Here</h2>
+        <p>Or</p>
+        <button id="uploadButton">Select File</button>
+        <input type="file" id="fileInput" style="display: none;">
+        <img id="previewImage" style="display: none;" />
+    </div>
+    <div id="predictionResult"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
