@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CropGuard-AI</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="sub-header2">
+      <nav>
+        <a href="index.html"><img src="/static/images/Frame 1.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Services.html">SERVICES</a></li>
+            <li><a href="Contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Contact Us</h1>
+    </section>
+
+    <!------- contact us ---------->
+
+    <section class="location">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5314348273446!2d73.88137657503628!3d18.459571982622247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb1b37dfcadd%3A0x56b9d4b16085873c!2sVIIT%20COLLEGE!5e0!3m2!1sen!2sin!4v1724249316201!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <section class="contact-us">
+      <div class="row">
+        <div class="contact-col">
+          <div>
+            <i class="fa fa-home"></i>
+            <span>
+              <h5>VIIT College</h5>
+              <p>Pune, Kondhwa, IN</p>
+            </span>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <span>
+              <h5>+91 7507385747</h5>
+              <p>Monday to Saturday, 10AM to 6PM</p>
+            </span>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <span>
+              <h5>cropgaurdai@gmail.com</h5>
+              <p>Email us your query</p>
+            </span>
+          </div>
+        </div>
+        <div class="contact-col">
+          <form action="Form-Handler.php" method="post">
+
+            <input type="text" name="name" placeholder="Enter Your name" required>
+            <input type="email" name="email" placeholder="Enter Email address" required>
+            <input type="text" name="subject" placeholder="Enter Your subject" required>
+            <textarea rows="8" name="message" placeholder="Messsage" required></textarea>
+            <button type="submit" class="hero-btn red-btn">Send Message</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--------- Footer --------->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>
+        CropGuard-AI is a revolutionary platform that combines advanced AI with agriculture. <br> 
+        We help farmers detect crop diseases in real-time by simply uploading an image, enabling quick and informed decisions to protect their yield. <br>
+        Join us in driving the future of smart farming. <br>
+      </p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </section>
+
+    <!---------- JavaScript----------->
+    <script src="static/js/script.js"></script>
+
+  </body>
+</html>
