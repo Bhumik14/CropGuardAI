@@ -24,6 +24,7 @@ def contact():
     return render_template('Contact.html')
 
 # Route to start the Streamlit app
+
 @app.route('/streamlit')
 def run_streamlit():
     subprocess.Popen(["streamlit", "run", "main.py"])
