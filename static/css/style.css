@@ -617,150 +617,6 @@ h3 {
 .faq.active .icon {
   transform: rotate(180deg);
 }
-
-/* -------------- CHATBOT------------ */
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#openChatbotBtn {
-  width: 3%;
-  position: fixed;
-  bottom: 20px;
-  left: 96%;
-  background-color: rgba(0,0,256,0.6); /* Modern Blue */
-  color: #FFFFFF; /* White font for contrast */
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 11px 17px;
-  font-size: 18px;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  z-index: 999;
-
-}
-
-@media(max-width: 700px){
-  #openChatbotBtn{
-    left: 88%;
-    bottom: 6%;
-    width: 45px;
-    padding: 10px 17px;
-    background-color: rgba(0,0,256,0.6);
-  }
-}
-
-#openChatbotBtn:hover {
-  background-color: rgba(0, 0, 256, 0.8); /* Darker blue */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05); /* Slightly enlarge the button */
-}
-
-
-.chatbot-popup {
-  display: none; /* Hidden by default */
-  position: fixed;
-  bottom: 80px; /* Adjusted to place above the button */
-  left: 76.5%;
-  width: 350px;
-  background: linear-gradient(135deg, #F0F4F8, #FFFFFF); /* Soft Modern Gradient */
-  border-radius: 12px;
-  border: 1px solid #E1E4E8; /* Light Modern Border */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: opacity 0.3s;
-  z-index: 1000;
-}
-
-@media(max-width: 700px){
-  .chatbot-popup{
-    left: 9%;
-    bottom: 11%;
-  }
-}
-
-.chatbot-header {
-  background-color: #007AFF; /* Modern Blue */
-  color: #FFFFFF; /* White font for contrast */
-  padding: 15px;
-  text-align: center;
-  font-size: 18px;
-  border-bottom: 1px solid #005BB5; /* Darker Modern Blue for border */
-  position: relative;
-}
-
-.close-btn {
-  color: #FFFFFF; /* White font for contrast */
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.chatbot-body {
-  width: 90%;
-  word-wrap: break-word;
-  padding: 20px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  background: #FFFFFF; /* Clean White Background */
-}
-
-.chat-history {
-
-  flex: 1;
-  overflow-y: auto;
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 8px;
-  background: #F7FAFC; /* Soft Light Background */
-  border: 1px solid #E1E4E8; /* Light Modern Border */
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Soft Inner Shadow */
-  color: #000000; /* Dark Charcoal for good readability */
-}
-
-.chat-history p {
-  margin: 10px 0;
-  font-size: 14px;
-  color: black;
-}
-
-.chatbot-body [type="text"] {
-  width: calc(100% - 100px);
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #E1E4E8; /* Light Modern Border */
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); /* Soft Inner Shadow */
-  margin-right: 10px;
-  font-size: 14px;
-  color: #333333; /* Dark Charcoal for readability */
-}
-
-#sendBtn {
-  width: 30%;
-  margin-top: 8px;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: #007AFF; /* Modern Blue */
-  color: #FFFFFF; /* White font for contrast */
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-#sendBtn:hover {
-  background-color: #005BB5; /* Darker Modern Blue on hover */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* ---------------------------- WEATHER APPLICATION ----------------------------*/
 
 .section {
@@ -906,4 +762,78 @@ button {
     font-size: 14px;
     margin-top: 10px; 
     display: none;
+}
+
+
+/* ---------------------News--------------- */
+
+.newsupdate {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.newsupdate h1 {
+  text-align: center;
+  color: #4a4a4a;
+}
+
+/* News Container */
+#news {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between news items */
+  justify-content: center;
+}
+
+/* News Item Styles */
+.news-item {
+  width: 300px; /* Fixed width for rectangular blocks */
+  min-height: 200px; /* Minimum height to ensure a decent size */
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  flex-grow: 1; /* Allows description to take up available space */
+}
+
+.news-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-item {
+      width: 100%; /* Full width on small screens */
+      max-width: 500px; /* Max width to avoid too large items */
+  }
+}
+#google_translate_element{
+  width: 100%;
+  margin: 5px;
+  transform: scale(1.0);
 }

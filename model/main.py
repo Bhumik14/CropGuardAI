@@ -1,10 +1,51 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+import json
+
+#Logo
+st.sidebar.image("Logo.png")
+global data
+
+# # Translator
+# import streamlit.components.v1 as components
+
+# # Add Google Translate widget
+# def add_google_translate_widget():
+#     translate_widget = """
+#     <div id="google_translate_element"></div>
+#     <script type="text/javascript">
+#     function googleTranslateElementInit() {
+#       new google.translate.TranslateElement({
+#         pageLanguage: 'en',
+#         autoDisplay: false
+#       }, 'google_translate_element');
+#     }
+#     </script>
+#     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+#     """
+#     components.html(translate_widget, height=100)
+
+# # Display the Google Translate widget
+# add_google_translate_widget()
+
+# Precautions
+def load_disease_info():
+    with open('disease_info.json', 'r') as f:
+        data = f
+        return json.load(f)
+
+disease_info = load_disease_info()
+
+def get_precautions_and_treatment(disease_name):
+    if disease_name in disease_info:
+        return disease_info[disease_name]["Symptoms"],disease_info[disease_name]["Precautions"], disease_info[disease_name]["Treatment"]
+    return "No precautions found", "No treatment found"
+
 
 # Model Prediction
 def model_prediction(test_image):
-    model = tf.keras.models.load_model("trained_model.keras")
+    model = tf.keras.models.load_model("model.keras")
     image = tf.keras.preprocessing.image.load_img(test_image,target_size=(64,64)) #loading image in tf format to 64x64 size    
     input_arr = tf.keras.preprocessing.image.img_to_array(image) #converting image to array
     input_arr = np.array([input_arr]) #this will turn array to a batch as we inputted model with batches
@@ -12,13 +53,16 @@ def model_prediction(test_image):
     result_index = np.argmax(prediction)
     return result_index
 
-# Sidebar
+# Sidebar 
 st.sidebar.header("Step into the future of agriculture—where every leaf tells a story.🍃✨")
-st.sidebar.title("Dashboard")
-st.sidebar.write("Explore our other tabs here..") 
-app_mode = st.sidebar.selectbox("Switch To Another Tab",["Home","About","Disease Prediction"])
-st.sidebar.image("img123.jpg", caption="Solving Farmers Issues")
-st.sidebar.image("img125.jpg", caption="Predicting various Diseases")
+app_mode = st.sidebar.selectbox("Switch to Other Tabs",["Home","About","Disease Prediction"])
+
+st.sidebar.image("img876.jpeg")
+st.sidebar.write("See how every scan can save a crop. 📸🌿")
+st.sidebar.image("img765.jpeg")
+st.sidebar.write("Ensuring Healthy Harvests through Innovation 🌱🌾")
+st.sidebar.image("img987.jpeg")
+st.sidebar.write("From Detection to Prevention—AI in Action 🌿⚙️")
 
 # 3rd page
 if(app_mode=="Disease Prediction"):
@@ -103,21 +147,44 @@ elif(app_mode=="Home"):
         st.write("Our Prediction")
         result_index = model_prediction(test_image)
         #Reading Labels
-        class_name = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy',
-                    'Blueberry___healthy', 'Cherry_(including_sour)___Powdery_mildew', 
-                    'Cherry_(including_sour)___healthy', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 
-                    'Corn_(maize)___Common_rust_', 'Corn_(maize)___Northern_Leaf_Blight', 'Corn_(maize)___healthy', 
-                    'Grape___Black_rot', 'Grape___Esca_(Black_Measles)', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 
-                    'Grape___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Peach___Bacterial_spot',
-                    'Peach___healthy', 'Pepper,_bell___Bacterial_spot', 'Pepper,_bell___healthy', 
-                    'Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy', 
-                    'Raspberry___healthy', 'Soybean___healthy', 'Squash___Powdery_mildew', 
-                    'Strawberry___Leaf_scorch', 'Strawberry___healthy', 'Tomato___Bacterial_spot', 
-                    'Tomato___Early_blight', 'Tomato___Late_blight', 'Tomato___Leaf_Mold', 
-                    'Tomato___Septoria_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 
-                    'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus',
-                      'Tomato___healthy']
-        st.success("Model is Predicting it's a {}".format(class_name[result_index]))  
+        class_name = [
+    'AppleAppleScab', 'AppleBlackRot', 'AppleCedarAppleRust', 'AppleHealthy',
+    'BlueberryHealthy', 'Cherry(includingSour)PowderyMildew', 
+    'Cherry(includingSour)Healthy', 'Corn(maize)CercosporaLeafSpotGrayLeafSpot', 
+    'Corn(maize)CommonRust', 'Corn(maize)NorthernLeafBlight', 'Corn(maize)Healthy', 
+    'GrapeBlackRot', 'GrapeEsca(BlackMeasles)', 'GrapeLeafBlight(IsariopsisLeafSpot)', 
+    'GrapeHealthy', 'OrangeHaunglongbing(CitrusGreening)', 'PeachBacterialSpot',
+    'PeachHealthy', 'Pepper,BellBacterialSpot', 'Pepper,BellHealthy', 
+    'PotatoEarlyBlight', 'PotatoLateBlight', 'PotatoHealthy', 
+    'RaspberryHealthy', 'SoybeanHealthy', 'SquashPowderyMildew', 
+    'StrawberryLeafScorch', 'StrawberryHealthy', 'TomatoBacterialSpot', 
+    'TomatoEarlyBlight', 'TomatoLateBlight', 'TomatoLeafMold', 
+    'TomatoSeptoriaLeafSpot', 'TomatoSpiderMitesTwoSpottedSpiderMite', 
+    'TomatoTargetSpot', 'TomatoTomatoYellowLeafCurlVirus', 'TomatoTomatoMosaicVirus',
+    'TomatoHealthy'
+]
+
+        st.success("Model is Predicting it's a {}".format(class_name[result_index]))
+        # st.write(get_precautions_and_treatment(class_name[result_index]))
+        disease_name = class_name[result_index]
+        Symptoms, Precautions, Treatment = get_precautions_and_treatment(disease_name)
+
+        # Display the disease name as a header
+        st.header(f"Disease: {disease_name}")
+
+        # Display the precautions
+        st.subheader("Precautions")
+        st.write(Precautions if isinstance(Precautions, str) else "\n".join([f"- {Precaution}" for Precaution in Precautions]))
+
+        # Display the treatment
+        st.subheader("Treatment")
+        st.write(Treatment if isinstance(Treatment, str) else "\n".join([f"- {treat}" for treat in Treatment]))
+
+        # Display Symptoms
+        st.subheader("Symptoms")
+        st.write(Symptoms if isinstance(Symptoms, str) else "\n".join([f"- {Symptom}" for Symptom in Symptoms]))
+
+
 st.video("vid2.mp4", start_time=0, loop=True, autoplay=True, muted=True)
 st.header("Discover the power of AI in safeguarding our crops and securing our future.🤖🌿")
 st.video("vid3.mp4", start_time=0, loop=True, autoplay=True, muted=True)

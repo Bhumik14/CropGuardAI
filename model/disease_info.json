@@ -1,0 +1,477 @@
+{
+    "AppleAppleScab": {
+      "Symptoms": [
+        "Olive-green to brown lesions on leaves and fruit.",
+        "Leaves may curl and drop prematurely.",
+        "Fruit may develop corky, scabby spots."
+      ],
+      "Precautions": [
+        "Use disease-resistant apple varieties.",
+        "Prune trees to allow good air circulation.",
+        "Remove and destroy fallen leaves and infected fruit."
+      ],
+      "Treatment": [
+        "Apply fungicides like captan or myclobutanil during the growing season.",
+        "Implement regular spraying schedules, especially during wet weather."
+      ]
+    },
+    "AppleBlackRot": {
+      "Symptoms": [
+        "Dark, sunken lesions on fruit, often with concentric rings.",
+        "Infected fruit may shrivel and mummify on the tree.",
+        "Black, sunken cankers on branches."
+      ],
+      "Precautions": [
+        "Prune out dead or diseased wood during winter.",
+        "Ensure good air circulation by proper spacing and pruning.",
+        "Keep the orchard clean of fallen fruit and leaves."
+      ],
+      "Treatment": [
+        "Apply fungicides such as thiophanate-methyl or captan.",
+        "Remove infected fruit and branches immediately."
+      ]
+    },
+    "AppleCedarAppleRust": {
+      "Symptoms": [
+        "Bright yellow or orange spots on upper leaf surfaces.",
+        "Orange, gelatinous galls on fruit and branches.",
+        "Infected leaves may drop prematurely."
+      ],
+      "Precautions": [
+        "Plant disease-resistant apple varieties.",
+        "Remove nearby juniper trees, which are alternate hosts.",
+        "Prune out infected branches and galls."
+      ],
+      "Treatment": [
+        "Apply fungicides like myclobutanil or mancozeb during the growing season.",
+        "Remove and destroy infected leaves and fruit."
+      ]
+    },
+    "AppleHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "BlueberryHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "Cherry(includingSour)PowderyMildew": {
+      "Symptoms": [
+        "White, powdery fungal growth on leaves and stems.",
+        "Infected leaves may become distorted and drop prematurely.",
+        "Reduced fruit quality and yield."
+      ],
+      "Precautions": [
+        "Plant powdery mildew-resistant cherry varieties.",
+        "Ensure good air circulation through proper spacing and pruning.",
+        "Avoid overhead irrigation and reduce humidity."
+      ],
+      "Treatment": [
+        "Apply fungicides such as sulfur or myclobutanil.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "Cherry(includingSour)Healthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "Corn(maize)CercosporaLeafSpotGrayLeafSpot": {
+      "Symptoms": [
+        "Small, tan to gray spots with dark borders on leaves.",
+        "Lesions may merge, causing large, blighted areas.",
+        "Reduced photosynthesis leading to poor ear development."
+      ],
+      "Precautions": [
+        "Plant disease-resistant corn hybrids.",
+        "Rotate crops to reduce pathogen buildup in soil.",
+        "Avoid excessive nitrogen fertilization."
+      ],
+      "Treatment": [
+        "Apply fungicides such as azoxystrobin or pyraclostrobin at early stages.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "Corn(maize)CommonRust": {
+      "Symptoms": [
+        "Small, reddish-brown pustules on leaves.",
+        "Pustules may rupture, releasing spores.",
+        "Severe infection can cause leaf tissue death."
+      ],
+      "Precautions": [
+        "Plant rust-resistant corn hybrids.",
+        "Rotate crops to reduce disease pressure.",
+        "Ensure good field sanitation by removing crop debris."
+      ],
+      "Treatment": [
+        "Apply fungicides like tebuconazole or propiconazole.",
+        "Monitor fields regularly for early detection."
+      ]
+    },
+    "Corn(maize)NorthernLeafBlight": {
+      "Symptoms": [
+        "Large, cigar-shaped lesions on leaves.",
+        "Lesions may coalesce, leading to leaf blight.",
+        "Severe infection can reduce grain yield."
+      ],
+      "Precautions": [
+        "Plant resistant corn hybrids.",
+        "Rotate crops and practice good field hygiene.",
+        "Avoid overhead irrigation to reduce leaf wetness."
+      ],
+      "Treatment": [
+        "Apply fungicides such as pyraclostrobin or propiconazole.",
+        "Implement early spraying, especially in susceptible hybrids."
+      ]
+    },
+    "Corn(maize)Healthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "GrapeBlackRot": {
+      "Symptoms": [
+        "Small, dark spots on leaves, shoots, and fruit.",
+        "Infected fruit shrivels and mummifies.",
+        "Lesions may develop concentric rings on fruit."
+      ],
+      "Precautions": [
+        "Plant disease-resistant grape varieties.",
+        "Prune vines to improve air circulation and sunlight penetration.",
+        "Remove and destroy mummified fruit and infected plant parts."
+      ],
+      "Treatment": [
+        "Apply fungicides such as mancozeb or myclobutanil during the growing season.",
+        "Implement a regular spraying schedule, especially in wet conditions."
+      ]
+    },
+    "GrapeEsca(BlackMeasles)": {
+      "Symptoms": [
+        "Interveinal chlorosis and necrosis on leaves.",
+        "Dark streaks in the wood of the vine.",
+        "Fruit may develop black spots and shrivel."
+      ],
+      "Precautions": [
+        "Avoid wounding the vines during pruning.",
+        "Remove and destroy infected plant material.",
+        "Use disease-free planting stock."
+      ],
+      "Treatment": [
+        "Apply fungicides like thiophanate-methyl or myclobutanil.",
+        "Prune out infected wood and improve vineyard sanitation."
+      ]
+    },
+    "GrapeLeafBlight(IsariopsisLeafSpot)": {
+      "Symptoms": [
+        "Small, dark spots on leaves that expand and merge.",
+        "Infected leaves may become distorted and drop prematurely.",
+        "Reduced vine vigor and fruit quality."
+      ],
+      "Precautions": [
+        "Plant resistant grape varieties.",
+        "Improve air circulation through proper spacing and pruning.",
+        "Remove and destroy infected leaves and plant debris."
+      ],
+      "Treatment": [
+        "Apply fungicides such as copper-based products or myclobutanil.",
+        "Implement a regular monitoring and spraying schedule."
+      ]
+    },
+    "GrapeHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "OrangeHaunglongbing(CitrusGreening)": {
+      "Symptoms": [
+        "Mottled yellowing of leaves with asymmetric patterns.",
+        "Small, misshapen, and bitter-tasting fruit.",
+        "Premature fruit drop and tree decline."
+      ],
+      "Precautions": [
+        "Plant disease-free citrus trees.",
+        "Control the Asian citrus psyllid vector with insecticides.",
+        "Remove and destroy infected trees to prevent spread."
+      ],
+      "Treatment": [
+        "There is no cure; focus on prevention and vector control.",
+        "Use systemic insecticides to control psyllid populations.",
+        "Implement good nutrition and irrigation practices to maintain tree health."
+      ]
+    },
+    "PeachBacterialSpot": {
+      "Symptoms": [
+        "Small, water-soaked spots on leaves and fruit.",
+        "Lesions may become dark and sunken, with a scabby appearance.",
+        "Infected leaves may turn yellow and drop prematurely."
+      ],
+      "Precautions": [
+        "Plant bacterial spot-resistant peach varieties.",
+        "Prune trees to improve air circulation and reduce humidity.",
+        "Avoid overhead irrigation to minimize leaf wetness."
+      ],
+      "Treatment": [
+        "Apply copper-based bactericides during early stages of infection.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "Pepper,BellBacterialSpot": {
+      "Symptoms": [
+        "Small, water-soaked spots on leaves and fruit.",
+        "Lesions may become dark and sunken, with a scabby appearance.",
+        "Infected leaves may turn yellow and drop prematurely."
+      ],
+      "Precautions": [
+        "Plant resistant pepper varieties.",
+        "Avoid overhead irrigation and use drip irrigation instead.",
+        "Practice crop rotation to reduce pathogen buildup in soil."
+      ],
+      "Treatment": [
+        "Apply copper-based bactericides during early stages of infection.",
+        "Remove and destroy infected plant material."
+      ]
+    },
+    "Pepper,BellHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "PotatoEarlyBlight": {
+      "Symptoms": [
+        "Small, dark spots on lower leaves that expand and form concentric rings.",
+        "Yellowing of leaves and premature defoliation.",
+        "Dark, sunken lesions on tubers."
+      ],
+      "Precautions": [
+        "Plant disease-resistant potato varieties.",
+        "Rotate crops to reduce pathogen buildup in soil.",
+        "Avoid overhead irrigation to minimize leaf wetness."
+      ],
+      "Treatment": [
+        "Apply fungicides such as chlorothalonil or mancozeb.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "PotatoLateBlight": {
+      "Symptoms": [
+        "Water-soaked lesions on leaves that quickly turn dark brown or black.",
+        "White, fuzzy growth may develop on undersides of leaves in humid conditions.",
+        "Dark, sunken lesions on tubers that may lead to rot."
+      ],
+      "Precautions": [
+        "Plant blight-resistant potato varieties.",
+        "Rotate crops and practice good field sanitation.",
+        "Avoid overhead irrigation and ensure good drainage."
+      ],
+      "Treatment": [
+        "Apply fungicides such as chlorothalonil or metalaxyl.",
+        "Monitor fields regularly and implement early spraying schedules."
+      ]
+    },
+    "PotatoHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "RaspberryHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "SoybeanHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "SquashPowderyMildew": {
+      "Symptoms": [
+        "White, powdery fungal growth on leaves and stems.",
+        "Infected leaves may become distorted and drop prematurely.",
+        "Reduced fruit quality and yield."
+      ],
+      "Precautions": [
+        "Plant powdery mildew-resistant squash varieties.",
+        "Ensure good air circulation through proper spacing and pruning.",
+        "Avoid overhead irrigation and reduce humidity."
+      ],
+      "Treatment": [
+        "Apply fungicides such as sulfur or myclobutanil.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "StrawberryLeafScorch": {
+      "Symptoms": [
+        "Small, dark purple spots on leaves that expand and merge.",
+        "Infected leaves may become scorched and drop prematurely.",
+        "Reduced plant vigor and fruit production."
+      ],
+      "Precautions": [
+        "Plant disease-resistant strawberry varieties.",
+        "Improve air circulation through proper spacing and pruning.",
+        "Remove and destroy infected leaves and plant debris."
+      ],
+      "Treatment": [
+        "Apply fungicides such as captan or myclobutanil.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "StrawberryHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    },
+    "TomatoBacterialSpot": {
+      "Symptoms": [
+        "Small, water-soaked spots on leaves and fruit.",
+        "Lesions may become dark and sunken, with a scabby appearance.",
+        "Infected leaves may turn yellow and drop prematurely."
+      ],
+      "Precautions": [
+        "Plant bacterial spot-resistant tomato varieties.",
+        "Avoid overhead irrigation and use drip irrigation instead.",
+        "Practice crop rotation to reduce pathogen buildup in soil."
+      ],
+      "Treatment": [
+        "Apply copper-based bactericides during early stages of infection.",
+        "Remove and destroy infected plant material."
+      ]
+    },
+    "TomatoEarlyBlight": {
+      "Symptoms": [
+        "Small, dark spots on lower leaves that expand and form concentric rings.",
+        "Yellowing of leaves and premature defoliation.",
+        "Dark, sunken lesions on fruit."
+      ],
+      "Precautions": [
+        "Plant disease-resistant tomato varieties.",
+        "Rotate crops to reduce pathogen buildup in soil.",
+        "Avoid overhead irrigation to minimize leaf wetness."
+      ],
+      "Treatment": [
+        "Apply fungicides such as chlorothalonil or mancozeb.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "TomatoLateBlight": {
+      "Symptoms": [
+        "Water-soaked lesions on leaves that quickly turn dark brown or black.",
+        "White, fuzzy growth may develop on undersides of leaves in humid conditions.",
+        "Dark, sunken lesions on fruit and stems."
+      ],
+      "Precautions": [
+        "Plant blight-resistant tomato varieties.",
+        "Rotate crops and practice good field sanitation.",
+        "Avoid overhead irrigation and ensure good drainage."
+      ],
+      "Treatment": [
+        "Apply fungicides such as chlorothalonil or metalaxyl.",
+        "Monitor fields regularly and implement early spraying schedules."
+      ]
+    },
+    "TomatoLeafMold": {
+      "Symptoms": [
+        "Yellow spots on upper leaf surfaces that turn brown and develop a fuzzy, moldy appearance.",
+        "Infected leaves may drop prematurely.",
+        "Reduced fruit quality and yield."
+      ],
+      "Precautions": [
+        "Plant disease-resistant tomato varieties.",
+        "Improve air circulation through proper spacing and pruning.",
+        "Avoid overhead irrigation and reduce humidity."
+      ],
+      "Treatment": [
+        "Apply fungicides such as myclobutanil or copper-based products.",
+        "Implement regular monitoring and spraying schedules."
+      ]
+    },
+    "TomatoSeptoriaLeafSpot": {
+      "Symptoms": [
+        "Small, round, dark spots with lighter centers on leaves.",
+        "Lesions may coalesce, leading to larger areas of leaf necrosis.",
+        "Reduced photosynthesis and fruit yield."
+      ],
+      "Precautions": [
+        "Plant resistant tomato varieties.",
+        "Rotate crops to reduce pathogen buildup in soil.",
+        "Avoid working among wet plants to prevent spread."
+      ],
+      "Treatment": [
+        "Apply fungicides such as chlorothalonil or mancozeb.",
+        "Remove and destroy infected leaves."
+      ]
+    },
+    "TomatoSpiderMitesTwoSpottedSpiderMite": {
+      "Symptoms": [
+        "Small, yellow or white spots on leaves.",
+        "Webbing on the underside of leaves.",
+        "Leaf drop and reduced plant vigor."
+      ],
+      "Precautions": [
+        "Maintain proper irrigation and avoid plant stress.",
+        "Use miticides and introduce natural predators like predatory mites.",
+        "Ensure good air circulation and reduce dust."
+      ],
+      "Treatment": [
+        "Apply miticides such as abamectin or insecticidal soap.",
+        "Implement regular monitoring and treatment schedules."
+      ]
+    },
+    "TomatoTargetSpot": {
+      "Symptoms": [
+        "Small, dark spots with concentric rings on leaves and fruit.",
+        "Infected leaves may turn yellow and drop prematurely.",
+        "Reduced fruit quality and yield."
+      ],
+      "Precautions": [
+        "Plant disease-resistant tomato varieties.",
+        "Avoid overhead irrigation and use drip irrigation instead.",
+        "Practice crop rotation to reduce pathogen buildup in soil."
+      ],
+      "Treatment": [
+        "Apply fungicides such as chlorothalonil or mancozeb.",
+        "Monitor fields regularly and implement early spraying schedules."
+      ]
+    },
+    "TomatoTomatoYellowLeafCurlVirus": {
+      "Symptoms": [
+        "Leaves curl upward and become yellow.",
+        "Leaf veins may appear swollen and distorted.",
+        "Reduced fruit size and yield."
+      ],
+      "Precautions": [
+        "Plant disease-resistant tomato varieties.",
+        "Control whitefly populations, which spread the virus.",
+        "Remove and destroy infected plants."
+      ],
+      "Treatment": [
+        "There is no cure; focus on prevention and vector control.",
+        "Use insecticides to manage whitefly populations.",
+        "Implement good field hygiene and avoid planting in contaminated soil."
+      ]
+    },
+    "TomatoTomatoMosaicVirus": {
+      "Symptoms": [
+        "Mottled, light and dark green mosaic patterns on leaves.",
+        "Leaves may become distorted and curled.",
+        "Reduced fruit size and quality."
+      ],
+      "Precautions": [
+        "Plant disease-resistant tomato varieties.",
+        "Avoid handling plants when they are wet to prevent virus spread.",
+        "Disinfect tools and equipment regularly."
+      ],
+      "Treatment": [
+        "There is no cure; focus on prevention and sanitation.",
+        "Remove and destroy infected plants immediately.",
+        "Implement good field hygiene and avoid planting in contaminated soil."
+      ]
+    },
+    "TomatoHealthy": {
+      "Symptoms": [],
+      "Precautions": [],
+      "Treatment": []
+    }
+  }
+  

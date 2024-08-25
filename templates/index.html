@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 url=http://localhost:8501" />
     <title>CropGuard-AI</title>
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,30 +41,9 @@
           secure harvests,<br />
           which are essential for farmers' livelihoods and food security.
         </p>
-        <a href="#weather-app" class="hero-btn">Navigate To Weather App</a>
-        <button onclick="window.location.href='/streamlit'">Add Your Image</button>
-      </div>
-
-      <button id="openChatbotBtn">
-        <i class="fa-solid fa-spray-can-sparkles"></i>
-      </button>
-
-      <div id="chatbotContainer" class="chatbot-popup">
-        <div class="chatbot-header">
-          <span id="closeChatbotBtn" class="close-btn">&times;</span>
-          <h2>CropGuard-AI Assistant</h2>
-        </div>
-        <div class="chatbot-body">
-          <div id="chatHistory" class="chat-history">
-            <!-- Chat messages will appear here -->
-          </div>
-          <input
-            type="text"
-            id="userInput"
-            placeholder="Type your message here..."
-          />
-          <button id="sendBtn">Send</button>
-        </div>
+        <div id="google_translate_element"></div>
+        <a href='#weather-app' class="hero-btn">check weather </button></a>
+        <a href="http://localhost:8501" class="hero-btn">upload image</a>
       </div>
     </section>
 
@@ -90,8 +69,8 @@
           </div>
           <div class="weather">
             <img src="/static/images/rain.png" class="weather-icon" />
-            <h1 class="temp">22°C</h1>
-            <h2 class="city">New York</h2>
+            <h1 class="temp">23°C</h1>
+            <h2 class="city">Pune</h2>
             <div class="details">
               <div class="col">
                 <img src="/static/images/humidity.png" />
@@ -113,6 +92,57 @@
       </div>
     </div>
 
+<!-- ------------------------------------News & Updates---------------------- -->
+    <section class="newsupdate">
+      <h1>Latest News</h1>
+      <div id="news">Loading news...</div>
+    </section>
+    <script>
+      const ApiKey = '7de191e847d84b21b84c7646a712b3ed'; // Replace with your actual News API key
+const url = `https://newsapi.org/v2/everything?q=crops%20India%20Maharashtra&pageSize=12&apiKey=${ApiKey}`;
+
+fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        const newsContainer = document.getElementById('news');
+        newsContainer.innerHTML = ''; // Clear any previous content
+
+        data.articles.forEach(article => {
+            const newsItem = document.createElement('div');
+            newsItem.classList.add('news-item');
+
+            const title = document.createElement('div');
+            title.classList.add('news-title');
+            title.textContent = article.title;
+
+            const description = document.createElement('div');
+            description.classList.add('news-description');
+            description.textContent = article.description;
+
+            const link = document.createElement('a');
+            link.classList.add('news-link');
+            link.href = article.url;
+            link.target = '_blank';
+            link.textContent = 'Read more';
+
+            newsItem.appendChild(title);
+            newsItem.appendChild(description);
+            newsItem.appendChild(link);
+
+            newsContainer.appendChild(newsItem);
+        });
+    })
+    .catch(error => {
+        document.getElementById('news').textContent = 'Failed to load news.';
+        console.error('Error fetching news:', error);
+    });
+
+    </script>
     <!---------- Project ---------->
 
     <section class="Project">
@@ -164,7 +194,7 @@
       <h1>Frequently Asked Questions</h1>
       <div class="faq">
         <div class="question">
-          <span>What are the common symptoms of crop diseases</span>
+          <span>What are the common symptoms of crop diseases?</span>
           <svg class="icon" viewBox="0 0 24 24">
             <path d="M6 9l6 6 6-6"></path>
           </svg>
@@ -231,7 +261,115 @@
     </section>
 
     <!---------- JavaScript----------->
-    <script src="static/js/script.js"></script>
 
-  </body>
+    <script>
+      // ------------Toggle Menu-------------
+
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0px";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+      // --------------weather app-----------
+
+      const apiKey = "8805259a09763c59b9addbf0a5b031ba";
+      const apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+
+        const searchBox = document.querySelector(".search input");
+        const searchBtn = document.querySelector(".search button");
+        const weatherIcon = document.querySelector(".weather-icon");
+        
+      async function checkWeather(city) {
+        const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+        if(response.status == 404){
+            document.querySelector(".error").style.display = "block";
+            document.querySelector(".weather").style.display = "none";
+        }else{
+            var data = await response.json();
+
+        console.log(data);
+
+        document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+        document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+        document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+
+        if(data.weather[0].main == "Clouds"){
+            weatherIcon.src = "/static/images/clouds.png";
+        }else if(data.weather[0].main == "Clear"){
+            weatherIcon.src = "/static/images/clear.png";
+        }else if(data.weather[0].main == "Rain"){
+            weatherIcon.src = "/static/images/rain.png";
+        }else if(data.weather[0].main == "Drizzle"){
+            weatherIcon.src = "/static/images/drizzle.png";
+        }else if(data.weather[0].main == "Mist"){
+            weatherIcon.src = "/static/images/mist.png";
+        }     
+        document.querySelector(".error").style.display = "none";
+        }
+      }
+      searchBtn.addEventListener("click", () => {
+             checkWeather(searchBox.value); // Pass the city name to the checkWeather function
+      });
+
+      
+// Close the popup if the user clicks outside of it
+window.onclick = function(event) {
+    if (event.target == document.getElementById("chatbotContainer")) {
+        document.getElementById("chatbotContainer").style.display = "none";
+    }
+};
+
+  // --------------FAQ's------------------
+
+  document.addEventListener("DOMContentLoaded", () => {
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach((faq) => {
+          const question = faq.querySelector(".question");
+
+          question.addEventListener("click", () => {
+            // Close other open FAQs
+            faqs.forEach((item) => {
+              if (item !== faq && item.classList.contains("active")) {
+                item.classList.remove("active");
+              }
+            });
+
+            // Toggle current FAQ
+            faq.classList.toggle("active");
+          });
+        });
+      });
+    </script>
+    
+  <!-- ---------------------------Translator----------------- -->
+<script type=
+"text/javascript">
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'mr,hi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+</script>
+
+<script type=
+"text/javascript" 
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+<!-- ------------------------------------------------------------- -->
+
+
+
+<!-- ---------------------------ChatBot----------------- -->
+<script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/1bc72051-6bd8-4b37-ad50-60161dc0516a/webchat/v2.1/config.js"></script>
+<!-- ---------------------------------------------------- -->
+
+</body>
 </html>

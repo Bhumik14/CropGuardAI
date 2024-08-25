@@ -106,7 +106,20 @@
     </section>
 
     <!---------- JavaScript----------->
-    <script src="static/js/script.js"></script>
 
+    <script>
+      // ------------Toggle Menu-------------
+
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0px";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+      </script>
+      
   </body>
 </html>
