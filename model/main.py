@@ -7,6 +7,23 @@ import json
 st.sidebar.image("Logo.png")
 global data
 
+
+# # Custom CSS for the background image
+# page_bg_img = '''
+# <style>
+# body {
+# background-image: url("model/img123.jpg");
+# background-size: cover;
+# background-repeat: no-repeat;
+# background-attachment: fixed;
+# }
+# </style>
+# '''
+
+# # Inject the CSS into the Streamlit app
+# st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
 # # Translator
 # import streamlit.components.v1 as components
 
