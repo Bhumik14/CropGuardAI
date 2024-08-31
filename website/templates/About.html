@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CropGuard-AI</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="/static/images/Frame 1.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="{{ url_for('views.home') }}">HOME</a></li>
+            <li><a href="{{ url_for('views.about') }}">ABOUT US</a></li>
+            <li><a href="{{ url_for('views.services') }}">SERVICES</a></li>
+            <li><a href="{{ url_for('views.contact') }}">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>About Us</h1>
+    </section>
+
+    <!------- about us content ---------->
+    <section class="about-us">
+      <div class="row">
+        <div class="about-col">
+          <h1><b>We Are a Team</b></h1>
+
+<p><b>Purpose-Driven</b>: We observed the challenges farmers face with crop diseases and came together to create a solution that makes a real difference.</p>
+
+<p><b>Empowering Farmers</b>: Our goal is to provide farmers with a simple tool for early disease detection, helping them make informed decisions for healthier crops.</p>
+
+<p><b>Innovation with Compassion</b>: We blend cutting-edge technology with ease of use, ensuring that even those with limited tech skills can benefit.</p>
+
+<p><b>Collaborative Effort</b>: Our diverse team of experts is united in bridging the gap between technology and traditional farming practices.</p>
+
+<p><b>Lasting Impact</b>: We're committed to being more than just a tool—we strive to be a trusted partner in every farmer's journey, supporting sustainable agriculture.</p>
+
+          <a href="About.html" class="hero-btn red-btn">Explore More</a>
+        </div>
+        <div class="about-col">
+          <img src="/static/images/Contact.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!--------- Footer --------->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>
+        CropGuard-AI is a revolutionary platform that combines advanced AI with agriculture. <br> 
+        We help farmers detect crop diseases in real-time by simply uploading an image, enabling quick and informed decisions to protect their yield. <br>
+        Join us in driving the future of smart farming. <br>
+      </p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <p>Made with <i class="fa-regular fa-heart"></i> CropGuard-AI Ltd</p>
+    </section>
+
+    <!---------- JavaScript----------->
+
+    <script>
+      // ------------Toggle Menu-------------
+
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0px";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+      </script>
+  </body>
+</html>

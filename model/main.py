@@ -7,23 +7,6 @@ import json
 st.sidebar.image("Logo.png")
 global data
 
-
-# # Custom CSS for the background image
-# page_bg_img = '''
-# <style>
-# body {
-# background-image: url("model/img123.jpg");
-# background-size: cover;
-# background-repeat: no-repeat;
-# background-attachment: fixed;
-# }
-# </style>
-# '''
-
-# # Inject the CSS into the Streamlit app
-# st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
 # # Translator
 # import streamlit.components.v1 as components
 
@@ -112,7 +95,7 @@ if(app_mode=="Disease Prediction"):
 #About Project
 elif(app_mode=="About"):
     st.header("About")
-    st.video("vid1.mp4", start_time=12, loop=True, autoplay=True, muted=True)
+    st.image("home1.jpg", use_column_width=True)
     st.header("🌱 Our Commitment to Agricultural Innovation 🌾")
     st.markdown("""
                 🌱 About Us: Our Commitment to Agricultural Innovation 🌾
@@ -202,10 +185,11 @@ elif(app_mode=="Home"):
         st.write(Symptoms if isinstance(Symptoms, str) else "\n".join([f"- {Symptom}" for Symptom in Symptoms]))
 
 
-st.video("vid2.mp4", start_time=0, loop=True, autoplay=True, muted=True)
+st.image("home2.jpg", use_column_width=True)
 st.header("Discover the power of AI in safeguarding our crops and securing our future.🤖🌿")
-st.video("vid3.mp4", start_time=0, loop=True, autoplay=True, muted=True)
+st.image("home3.jpg", use_column_width=True)
 st.header("Join us on a journey to revolutionize crop protection and boost yields!🌍✨")
+
 
 
 
